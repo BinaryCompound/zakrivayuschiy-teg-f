@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    /*Переменные основной темы*/
+    --accent-color-1: #00CC14;
+    --accent-color-2: #000;
+    --background-header: url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat, linear-gradient(180deg, #007F0C 0%, #004306 100%);;
+
+    /*Шрифты*/
+    --font-family-variable: Inter-Variable, serif;
+    --font-family: PressStart2P-Regular, monospace;
+    --font-weight-pretitle-bolder: 785;
+    --font-weight-pretitle: 700;
+    --font-weight-paragraph-bolder: 465;
+    --font-weight-paragraph: 400;
+    --font-weight-watermark: 400;
+
+    /*Размер шрифтов*/
+    --font-size-header: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);;
+    --font-size-postheader: 23px;
+    --font-title: 25px;
+    --font-size-paragraph: 18px;
+    --font-size-button: 14px;
+
+    /* Цвета для кнопки like */
+    --animation-color: #ff0000;
+}

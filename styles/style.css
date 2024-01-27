@@ -15,6 +15,215 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  width: clamp(320px, 91vh, 1440px);
+  background-image: var(--background-header);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.header {
+  min-height: 364px;
+  width: 100%;
+  color: var(--accent-color-1);
+  background-color: var(--accent-color-2);
+  border: 2px solid var(--accent-color-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 23px;
+  margin-bottom: 100px;
+  padding-bottom: 19px;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center
+}
+
+.title,
+.under__title {
+  font-weight: var(--font-weight-paragraph);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: var(--font-size-header);
+}
+
+.under__title {
+  font-size: var(--font-size-postheader);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+button {
+  color: var(--accent-color-1);
+  font-family: var(--font-family);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.theme-menu__button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: flex-start;
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-paragraph);
+  border: transparent;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.theme-menu__button::before {
+  content: "▶";
+  position: absolute;
+  left: -16px;
+  opacity: 0.6;
+  animation: left-right-move 0.5s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 2px;
+  background-color: var(--elements-accent-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+p {
+  color: var(--accent-color-1);
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-paragraph-bolder);
+  line-height: 21px;
+}
+
+.watermark {
+  position: absolute;
+  top: 19px;
+  right: 26px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-watermark);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--accent-color-2);
+  outline: 2px solid var(--accent-color-1);
+}
+
+.post__title {
+  color: var(--accent-color-1);
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-pretitle-bolder);
+  padding: 10px;
+}
+
+.image__container {
+  position: relative;
+  outline: 2px solid var(--accent-color-1);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  aspect-ratio: 1 / 1;
+}
+
+.text-post__container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.card__like-button {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-button); 
+  padding: 10px 20px;
+  border: 2px solid var(--accent-color-1);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color-1);
+  transition: left 0.3s ease-in-out;
+}
+
+.card__like-button:hover::before {
+  left: 0;
+}
+
+.card__like-button .button__text {
+  position: relative;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.button__text:hover {
+  color: var(--color-letter-button);
+}
+
+dialog {
+  margin: 50px;
+  border: 2px solid var(--accent-color-1);
+}
+
+
+.sparks {
+  opacity: 0;
 }
