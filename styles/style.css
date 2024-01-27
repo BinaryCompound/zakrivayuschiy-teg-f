@@ -139,6 +139,13 @@ p {
   font-family: var(--font-family);
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-watermark);
+  color: var(--accent-color-1);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--accent-color-2);
+  line-height: normal;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
 }
 
 .posts {
@@ -226,4 +233,12 @@ dialog {
 
 .sparks {
   opacity: 0;
+}
+
+
+@media (width <= 450px) {
+  .page {
+    width: 100%;
+    min-width: 320px;
+  }
 }
