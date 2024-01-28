@@ -9,6 +9,7 @@
     --favicon-color: #FFF;
     --accent-color-1: #00CC14;
     --accent-color-2: #000;
+    --accent-color-3: #00CC14;
     --background-button: #000;
     --color-letter-button: #000;
     --animation-color:#ff0000;
@@ -20,6 +21,7 @@
 :root.theme-light {
     --accent-color-1:#000;
     --accent-color-2:#FFF;
+    --accent-color-3: #FFF;
     --background-button: #FFF;
     --color-letter-button: #FFF;
     --animation-color: #ff0000;
