@@ -227,7 +227,6 @@ p {
 @supports (mix-blend-mode: difference) {
   .button svg {
     color: white;
-    transition: none;
     mix-blend-mode: difference;
     transition: color 0.5s ease-in-out;
   }
