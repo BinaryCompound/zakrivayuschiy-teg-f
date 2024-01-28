@@ -13,6 +13,28 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+button {
+  color: var(--accent-color-1);
+  font-family: var(--font-family);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+
+p {
+  color: var(--accent-color-1);
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-paragraph-bolder);
+  line-height: 21.3px;
+}
+
 
 .page {
   width: clamp(320px, 91vh, 1440px);
@@ -37,8 +59,8 @@
   align-items: center;
   justify-content: flex-end;
   gap: 23px;
-  margin-bottom: 100px;
-  padding-bottom: 19px;
+  margin-bottom: 105px;
+  padding-bottom: 20px;
 }
 
 .header__title {
@@ -65,17 +87,10 @@
 
 .theme-menu__list {
   display: flex;
+  padding-left: 25px;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-}
-
-button {
-  color: var(--accent-color-1);
-  font-family: var(--font-family);
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
 }
 
 .theme-menu__button {
@@ -118,20 +133,6 @@ button {
   background-color: var(--elements-accent-color);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 44px;
-}
-
-p {
-  color: var(--accent-color-1);
-  font-family: var(--font-family-variable);
-  font-size: var(--font-size-paragraph);
-  font-weight: var(--font-weight-paragraph-bolder);
-  line-height: 21px;
-}
-
 .watermark {
   position: absolute;
   top: 19px;
@@ -160,7 +161,10 @@ p {
   font-family: var(--font-family-variable);
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-pretitle-bolder);
-  padding: 10px;
+  padding-left: 10px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
 }
 
 .image__container {
@@ -190,6 +194,10 @@ p {
   gap: 7px;
 }
 
+.card__icon-button {
+  padding: 0;
+}
+
 .card__like-button {
   position: relative;
   overflow: hidden;
@@ -198,6 +206,7 @@ p {
   border: 2px solid var(--accent-color-1);
   cursor: pointer;
   font-size: 16px;
+  min-width: 130px;
 }
 
 .card__like-button::before {
@@ -224,48 +233,20 @@ p {
 .button__text:hover {
   color: var(--color-letter-button);
 }
-/*
 
-dialog {
-  margin: 50px;
+.main__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-color-2);
+  min-height: 51px;
   border: 2px solid var(--accent-color-1);
 }
-
-.save-button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-button); 
-  padding: 10px 20px;
-  border: 2px solid var(--accent-color-1);
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.save-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color-1);
-  transition: left 0.3s ease-in-out;
-}
-
-.save-button:hover::before {
-  left: 0;
-}
-
-.button__text-save {
-  position: relative;
-  z-index: 1;
-  transition: 0.5s ease-in-out;
-}
-
-.button__text-save:hover {
-  color: var(--color-letter-button);
-}
-*/
 
 dialog::backdrop {
   opacity: 0.75;
@@ -277,14 +258,14 @@ dialog::backdrop {
   min-width: 341px;
   border: 2px solid var(--accent-color-1);
   padding: 30px;
-  background: var(--accent-color-3);
+  background: var(--accent-color-2);
 }
 
 .dialog__container {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: var(--accent-color-1);
+  color: black;
 }
 
 .dialog__warning {
@@ -292,7 +273,7 @@ dialog::backdrop {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: var(--accent-color-1);
+  font-family: var(--font-family);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -305,6 +286,17 @@ dialog::backdrop {
   width: 100%;
   min-height: 38px;
   padding: 9px 17px;
+}
+
+.text_save {
+  font-family: var(--font-family);
+  color: var(--accent-color-1);
+}
+
+.button__text-save {
+  border: 2px solid var(--accent-color-1);
+    display: block;
+    padding: 9px 17px;
 }
 
 .sparks {

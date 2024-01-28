@@ -4,6 +4,7 @@
     --accent-color-1: #00CC14;
     --accent-color-2: #000;
     --accent-color-3: #00CC14;
+    --color-modal-background: #00CC14;
     --background-header: url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat, linear-gradient(180deg, #007F0C 0%, #004306 100%);;
 
     /*Шрифты*/

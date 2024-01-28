@@ -6,10 +6,10 @@
 */
 
 :root.theme-dark {
-    --favicon-color: #FFF;
     --accent-color-1: #00CC14;
     --accent-color-2: #000;
     --accent-color-3: #00CC14;
+    --color-modal-background: #00CC14;
     --background-button: #000;
     --color-letter-button: #000;
     --animation-color:#ff0000;
