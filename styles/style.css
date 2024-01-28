@@ -224,15 +224,13 @@ p {
   left: 0;
 }
 
-@supports (mix-blend-mode: difference){
+@supports (mix-blend-mode: difference) {
   .button svg {
     color: white;
     transition: none;
     mix-blend-mode: difference;
-}
-  .button svg {
     transition: color 0.5s ease-in-out;
-}
+  }
 }
 
 .button .button__text {
