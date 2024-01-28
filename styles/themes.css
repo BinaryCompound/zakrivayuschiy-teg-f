@@ -33,10 +33,11 @@
         :root {
             --accent-color-1: #000;
             --accent-color-2: #FFF;
+            --accent-color-3: #FFF;
             --color-letter-button: #FFF;
             --background-button: #FFF;
             --animation-color: #ff0000;
-            --background-header: url(../images/background.png);
+            --background-header: url(../images/background-light.png);
             --font-weight-pretitle: 700;
             --font-weight-paragraph: 400;
             

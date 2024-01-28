@@ -198,7 +198,7 @@ p {
   padding: 0;
 }
 
-.card__like-button {
+.button {
   position: relative;
   overflow: hidden;
   background-color: var(--background-button); 
@@ -209,7 +209,7 @@ p {
   min-width: 130px;
 }
 
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -220,11 +220,22 @@ p {
   transition: left 0.3s ease-in-out;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   left: 0;
 }
 
-.card__like-button .button__text {
+@supports (mix-blend-mode: difference){
+  .button svg {
+    color: white;
+    transition: none;
+    mix-blend-mode: difference;
+}
+  .button svg {
+    transition: color 0.5s ease-in-out;
+}
+}
+
+.button .button__text {
   position: relative;
   z-index: 1;
   transition: 0.5s ease-in-out;
@@ -293,12 +304,6 @@ dialog::backdrop {
   color: var(--accent-color-1);
 }
 
-.button__text-save {
-  border: 2px solid var(--accent-color-1);
-    display: block;
-    padding: 9px 17px;
-}
-
 .sparks {
   opacity: 0;
 }
@@ -307,5 +312,9 @@ dialog::backdrop {
   .page {
     width: 100%;
     min-width: 320px;
+  }
+
+  .dialog {
+    padding: 30px 40px;
   }
 }
