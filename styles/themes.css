@@ -6,41 +6,35 @@
 */
 
 :root.theme-dark {
-    --accent-color-1: #00CC14;
-    --accent-color-2: #000;
-    --accent-color-3: #00CC14;
-    --color-modal-background: #00CC14;
+    --main-color: #00CC14;
+    --auxiliary-color: #000;
     --background-button: #000;
     --color-letter-button: #000;
     --animation-color:#ff0000;
-    --background-header: url(../images/background.png);
     --font-weight-pretitle-bolder: 785;
     --font-weight-paragraph-bolder: 465;
 }
 
 :root.theme-light {
-    --accent-color-1:#000;
-    --accent-color-2:#FFF;
-    --accent-color-3: #FFF;
+    --main-color:#000;
+    --auxiliary-color:#FFF;
     --background-button: #FFF;
     --color-letter-button: #FFF;
     --animation-color: #ff0000;
-    --background-header: url(../images/background-light.png);
     --font-weight-pretitle: 700;
     --font-weight-paragraph: 400;
+}
 
-    @media (prefers-color-scheme: light) {
-        :root {
-            --accent-color-1: #000;
-            --accent-color-2: #FFF;
-            --accent-color-3: #FFF;
-            --color-letter-button: #FFF;
-            --background-button: #FFF;
-            --animation-color: #ff0000;
-            --background-header: url(../images/background-light.png);
-            --font-weight-pretitle: 700;
-            --font-weight-paragraph: 400;
-            
-        }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-color: #000;
+        --auxiliary-color: #FFF;
+        --color-letter-button: #FFF;
+        --background-button: #FFF;
+        --animation-color: #ff0000;
+        --font-weight-pretitle: 700;
+        --font-weight-paragraph: 400;
+        
     }
 }

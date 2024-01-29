@@ -14,7 +14,7 @@
 
 */
 button {
-  color: var(--accent-color-1);
+  color: var(--main-color);
   font-family: var(--font-family);
   background-color: transparent;
   cursor: pointer;
@@ -28,18 +28,24 @@ main {
 }
 
 p {
-  color: var(--accent-color-1);
+  color: var(--main-color);
   font-family: var(--font-family-variable);
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-paragraph-bolder);
   line-height: 21.3px;
 }
 
+a {
+  text-decoration: none;
+}
 
 .page {
-  width: clamp(320px, 91vh, 1440px);
-  background-image: var(--background-header);
+  max-width: clamp(320px, 695px, 1440px);
+  background: repeating-linear-gradient(90deg, var(--auxiliary-color) 0px 1px, rgba(242, 231, 231, 0) 3px 4px),
+  repeating-linear-gradient(180deg, var(--auxiliary-color) 0px 2px, var(--main-color)  3px 4px),
+  linear-gradient(180deg, var(--auxiliary-color) 0%, #1a1a1a 100%);
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -49,11 +55,11 @@ p {
 }
 
 .header {
-  min-height: 364px;
+  height: 48vh;
   width: 100%;
-  color: var(--accent-color-1);
-  background-color: var(--accent-color-2);
-  border: 2px solid var(--accent-color-1);
+  color: var(--main-color);
+  background-color: var(--auxiliary-color);
+  border: 2px solid var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,8 +110,15 @@ p {
   text-transform: uppercase;
   transition: 0.3s;
 }
+
 .theme-menu__button:hover {
   opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+outline: none;
+border-bottom: 2px solid var(--main-color);
+opacity: 0.6;
 }
 
 .theme-menu__button:disabled {
@@ -135,14 +148,14 @@ p {
 
 .watermark {
   position: absolute;
-  top: 19px;
+  top: 26px;
   right: 26px;
   font-family: var(--font-family);
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-watermark);
-  color: var(--accent-color-1);
+  color: var(--main-color);
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: var(--accent-color-2);
+  -webkit-text-stroke-color: var(--auxiliary-color);
   line-height: normal;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
@@ -152,12 +165,12 @@ p {
 .posts {
   display: flex;
   flex-direction: column;
-  background-color: var(--accent-color-2);
-  outline: 2px solid var(--accent-color-1);
+  background-color: var(--auxiliary-color);
+  outline: 2px solid var(--main-color);
 }
 
 .post__title {
-  color: var(--accent-color-1);
+  color: var(--main-color);
   font-family: var(--font-family-variable);
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-pretitle-bolder);
@@ -169,7 +182,7 @@ p {
 
 .image__container {
   position: relative;
-  outline: 2px solid var(--accent-color-1);
+  outline: 2px solid var(--main-color);
 }
 
 .image {
@@ -201,9 +214,9 @@ p {
 .button {
   position: relative;
   overflow: hidden;
-  background-color: var(--background-button); 
+  background-color: var(--background-button);
   padding: 10px 20px;
-  border: 2px solid var(--accent-color-1);
+  border: 2px solid var(--main-color);
   cursor: pointer;
   font-size: 16px;
   min-width: 130px;
@@ -216,7 +229,7 @@ p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color-1);
+  background-color: var(--main-color);
   transition: left 0.3s ease-in-out;
 }
 
@@ -236,6 +249,7 @@ p {
   position: relative;
   z-index: 1;
   transition: 0.5s ease-in-out;
+  font-family: var(--font-family);
 }
 
 .button__text:hover {
@@ -251,22 +265,22 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--accent-color-2);
+  background: var(--auxiliary-color);
   min-height: 51px;
-  border: 2px solid var(--accent-color-1);
+  border: 2px solid var(--main-color);
 }
 
 dialog::backdrop {
   opacity: 0.75;
-  background: var(--accent-color-1, #000);
+  background: var(--main-color, #000);
 }
 
 .dialog {
   width: calc(100vw * (352 / 1440));
   min-width: 341px;
-  border: 2px solid var(--accent-color-1);
+  border: 2px solid var(--main-color);
   padding: 30px;
-  background: var(--accent-color-2);
+  background: var(--auxiliary-color);
 }
 
 .dialog__container {
@@ -298,7 +312,8 @@ dialog::backdrop {
 
 .text_save {
   font-family: var(--font-family);
-  color: var(--accent-color-1);
+  color: var(--main-color);
+  font-size: var(--font-size-button);
 }
 
 .sparks {
