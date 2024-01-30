@@ -13,6 +13,35 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+
+#filter-saturate {
+  filter: saturate(0.5);
+}
+
+#filter-contrast {
+  filter: saturate(3.5);
+}
+
+#filter-hue {
+  filter: hue-rotate(45deg);
+}
+
+#fiter-invert {
+  filter: invert(1);
+}
+
+#filter-sepia {
+  filter: sepia(1);
+}
+
+#filter-blur {
+  filter: blur(15px);
+}
+
+#mix-filter {
+  filter: grayscale(50%) blur(3px) brightness(120%);
+}
+
 button {
   color: var(--main-color);
   font-family: var(--font-family);
@@ -31,7 +60,7 @@ p {
   color: var(--main-color);
   font-family: var(--font-family-variable);
   font-size: var(--font-size-paragraph);
-  font-weight: var(--font-weight-paragraph-bolder);
+  font-variation-settings: "wght" var(--font-weight-paragraph-bolder);
   line-height: 21.3px;
 }
 
@@ -55,7 +84,7 @@ a {
 }
 
 .header {
-  height: 48vh;
+  height: 47vh;
   width: 100%;
   color: var(--main-color);
   background-color: var(--auxiliary-color);
@@ -157,10 +186,11 @@ opacity: 0.6;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: var(--auxiliary-color);
   line-height: normal;
-  text-transform: uppercase;
   mix-blend-mode: hard-light;
   opacity: 0.5;
+  z-index: 9;
 }
+
 
 .posts {
   display: flex;
@@ -173,12 +203,13 @@ opacity: 0.6;
   color: var(--main-color);
   font-family: var(--font-family-variable);
   font-size: var(--font-size-paragraph);
-  font-weight: var(--font-weight-pretitle-bolder);
-  padding-left: 10px;
-  min-height: 34px;
+  font-variation-settings: "wght" var(--font-weight-pretitle-bolder);
+  padding: 4px 10px;
   display: flex;
   align-items: center;
 }
+
+
 
 .image__container {
   position: relative;
@@ -211,6 +242,10 @@ opacity: 0.6;
   padding: 0;
 }
 
+.card__icon-button:focus-visible {
+  outline: none;
+}
+
 .button {
   position: relative;
   overflow: hidden;
@@ -237,23 +272,25 @@ opacity: 0.6;
   left: 0;
 }
 
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--main-color);
+}
+
 @supports (mix-blend-mode: difference) {
   .button svg {
-    color: white;
     mix-blend-mode: difference;
-    transition: color 0.5s ease-in-out;
-  }
 }
 
-.button .button__text {
+}
+.button__text {
+  color: var(--color-text-button);
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
   transition: 0.5s ease-in-out;
   font-family: var(--font-family);
-}
-
-.button__text:hover {
-  color: var(--color-letter-button);
+  font-size: var(--font-size-button);
 }
 
 .main__footer {
@@ -266,7 +303,6 @@ opacity: 0.6;
   align-items: center;
   gap: 8px;
   background: var(--auxiliary-color);
-  min-height: 51px;
   border: 2px solid var(--main-color);
 }
 
@@ -276,7 +312,7 @@ dialog::backdrop {
 }
 
 .dialog {
-  width: calc(100vw * (352 / 1440));
+  width: calc(88vw * (354 / 1440));
   min-width: 341px;
   border: 2px solid var(--main-color);
   padding: 30px;
@@ -306,7 +342,6 @@ dialog::backdrop {
   align-items: center;
   gap: 10px;
   width: 100%;
-  min-height: 38px;
   padding: 9px 17px;
 }
 

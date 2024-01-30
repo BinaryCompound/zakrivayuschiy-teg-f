@@ -8,6 +8,7 @@
 :root.theme-dark {
     --main-color: #00CC14;
     --auxiliary-color: #000;
+    --color-text-button: #00CC14;
     --background-button: #000;
     --color-letter-button: #000;
     --animation-color:#ff0000;
@@ -18,11 +19,12 @@
 :root.theme-light {
     --main-color:#000;
     --auxiliary-color:#FFF;
+    --color-text-button: #FFF;
     --background-button: #FFF;
     --color-letter-button: #FFF;
     --animation-color: #ff0000;
-    --font-weight-pretitle: 700;
-    --font-weight-paragraph: 400;
+    --font-weight-pretitle-bolder: 700;
+    --font-weight-paragraph-bolder: 400;
 }
 
 
@@ -30,6 +32,7 @@
     :root {
         --main-color: #000;
         --auxiliary-color: #FFF;
+        --color-text-button: #FFF;
         --color-letter-button: #FFF;
         --background-button: #FFF;
         --animation-color: #ff0000;

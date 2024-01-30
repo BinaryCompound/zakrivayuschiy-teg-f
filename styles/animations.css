@@ -109,5 +109,6 @@
     transform-origin: center;
     opacity: 1;
     animation: animation-sparks-heart 0.3s 0.3s ease-in alternate;
+    animation-fill-mode: both;
   }
   
