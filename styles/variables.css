@@ -9,6 +9,7 @@
     --animation-color:#ff0000;
     --font-weight-pretitle-bolder: 785;
     --font-weight-paragraph-bolder: 465;
+    --gradient-fade: #000;
     /*Шрифты*/
     --font-family-variable: Inter-Variable, serif;
     --font-family: PressStart2P-Regular, monospace;
