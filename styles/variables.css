@@ -10,6 +10,10 @@
     --font-weight-pretitle-bolder: 785;
     --font-weight-paragraph-bolder: 465;
     --gradient-fade: #000;
+    --background-main: repeating-linear-gradient(90deg, transparent, transparent 2px, var(--auxiliary-color) 1px, var(--auxiliary-color) 4px),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, var(--auxiliary-color) 2px, var(--auxiliary-color) 4px),
+    linear-gradient(180deg, var(--main-color), var(--gradient-fade)),
+    linear-gradient(180deg, var(--color-text-button), var(--color-letter-button));;
     /*Шрифты*/
     --font-family-variable: Inter-Variable, serif;
     --font-family: PressStart2P-Regular, monospace;

@@ -70,11 +70,7 @@ a {
 
 .page {
   max-width: clamp(320px, 695px, 1440px);
-  background: 
-  repeating-linear-gradient(90deg, transparent, transparent 2px, var(--auxiliary-color) 1px, var(--auxiliary-color) 4px),
-  repeating-linear-gradient(0deg, transparent, transparent 2px, var(--auxiliary-color) 2px, var(--auxiliary-color) 4px),
-  linear-gradient(180deg, var(--main-color), var(--gradient-fade)),
-  linear-gradient(180deg, var(--color-text-button), var(--color-letter-button));
+  background-image: var(--background-main);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,7 +82,7 @@ a {
 }
 
 .header {
-  min-height: 364px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px 25px;
   width: 100%;
   color: var(--main-color);
   background-color: var(--auxiliary-color);
@@ -97,7 +93,6 @@ a {
   justify-content: flex-end;
   gap: 23px;
   margin-bottom: 105px;
-  padding-bottom: 20px;
 }
 
 .header__title {
@@ -245,6 +240,7 @@ opacity: 0.6;
 }
 
 .card__icon-button:focus-visible {
+  transition: 0.3s;
   outline: 2px solid var(--main-color);
 }
 
@@ -325,7 +321,7 @@ dialog::backdrop {
 }
 
 .dialog {
-  width: calc(88vw * (354 / 1440));
+  width: calc(100vw * (352 / 1440));
   min-width: 341px;
   border: 2px solid var(--main-color);
   padding: 30px;
